@@ -4,6 +4,7 @@ const card = document.getElementById('card')
 items.map((item, index)=>{
 
     let divCard = document.createElement('div')
+    divCard.setAttribute('class', 'one-card')
 
     let avatar = document.createElement('img')
     avatar.setAttribute('src', item.image)

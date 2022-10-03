@@ -1,0 +1,27 @@
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: antiquewhite ;
+    font-family: 'Courier New', Courier, monospace;
+}
+.cards{
+    /* width */
+    margin-top: 8rem ;
+    display: flex;
+    flex-wrap: wrap;
+    /* padding: 3rem 3rem; */
+
+}
+.one-card{
+    margin:3rem
+}
+.one-card img{
+    
+    width: 34vw;
+    height: 34vh;
+}
