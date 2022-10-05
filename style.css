@@ -14,14 +14,23 @@
     margin-top: 8rem ;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
     /* padding: 3rem 3rem; */
 
 }
 .one-card{
-    margin:3rem
+    margin:3rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 5px;
 }
 .one-card img{
-    
+    border-radius: 5px 5px 0 0;
     width: 34vw;
     height: 34vh;
+}
+.card-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }

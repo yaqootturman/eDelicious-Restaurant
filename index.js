@@ -9,15 +9,20 @@ items.map((item, index)=>{
     let avatar = document.createElement('img')
     avatar.setAttribute('src', item.image)
 
+    let container = document.createElement('div')
+    container.setAttribute('class','card-container')
+
     let dishName = document.createElement('h4')
     dishName.innerText = item.name
 
     let price = document.createElement('span')
-    price.innerText = item.price
+    price.innerText = item.price + ' $'
+
+    container.appendChild(dishName)
+    container.appendChild(price)
 
     divCard.appendChild(avatar)
-    divCard.appendChild(dishName)
-    divCard.appendChild(price)
+    divCard.appendChild(container)
 
     card.appendChild(divCard)
 })
