@@ -1,6 +1,8 @@
 
 const items = ITEMS
 const card = document.getElementById('card')
+let cart = []
+
 items.map((item, index)=>{
 
     let divCard = document.createElement('div')
@@ -8,9 +10,12 @@ items.map((item, index)=>{
 
     let avatar = document.createElement('img')
     avatar.setAttribute('src', item.image)
+    avatar.setAttribute('id',index )
+
 
     let container = document.createElement('div')
     container.setAttribute('class','card-container')
+    container.setAttribute('id',index )
 
     let dishName = document.createElement('h4')
     dishName.innerText = item.name
@@ -25,7 +30,16 @@ items.map((item, index)=>{
     divCard.appendChild(container)
 
     card.appendChild(divCard)
+    divCard.addEventListener("click",({target})=>{
+        updateCart(target)
+    })
 })
+
+const updateCart= (target)=>{
+    cart.push(items[target.id])
+}
+
+
 
 
 
