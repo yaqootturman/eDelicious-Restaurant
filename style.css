@@ -8,8 +8,9 @@
     right: 0;
     background-color: antiquewhite ;
     font-family: 'Courier New', Courier, monospace;
+    color: #f74f9e;
 }
-.cards{
+.cards , .cart{
     margin-top: 8rem ;
     display: flex;
     flex-wrap: wrap;
@@ -30,4 +31,35 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+.ul-list{
+    width: 80%;
+}
+.cart-item{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom:1px solid #009688;
+}
+.summation{
+    width: 80%;
+    margin-top: 13rem;
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'Courier New', Courier, monospace;
+
+    
+}
+.del-icon{
+    width: 8vw;
+}
+.delete-all{
+    all: unset;
+    cursor: pointer;
+    outline: #009688 5px auto;
+    font-family: 'Courier New', Courier, monospace;
+    height: fit-content;
+    margin-top: 13rem;
+
 }

@@ -31,16 +31,18 @@ items.map((item, index)=>{
 
     card.appendChild(divCard)
     divCard.addEventListener("click",({target})=>{
+        if(container.id== target.id){
+            divCard.style.border = "thick solid rgb(154, 154, 176)";
+        }
         updateCart(target)
     })
 })
 
 const updateCart= (target)=>{
-    cart.push(items[target.id])
+    let returnValue = window.prompt(`How many ${items[target.id].name} you want to add`);
+    let obj = items[target.id]
+    returnValue == null ? '' : returnValue
+    obj ={...obj,count : returnValue }
+    cart.push(obj)
+    localStorage.setItem('cart', JSON.stringify( cart));
 }
-
-
-
-
-
-  
